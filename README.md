@@ -1,13 +1,13 @@
 # Tableau Connector SDK - BETA
 
-![Tableau Supported](https://img.shields.io/badge/Support%20Level-Tableau%20Supported-53bd92.svg) [![Build Status](https://travis-ci.org/tableau/connector-plugin-sdk.svg?branch=master)](https://travis-ci.org/tableau/connector-plugin-sdk)
+![Tableau Supported](https://img.shields.io/badge/Support%20Level-Tableau%20Supported-53bd92.svg) [![Connector Packaging CI Status](https://github.com/tableau/connector-plugin-sdk/workflows/Connector%20Packager%20CI/badge.svg?branch=master)](https://github.com/tableau/connector-plugin-sdk/actions?query=workflow%3A%22Connector+Packager+CI%22+branch%3Amaster++) [![TDVT CI Status](https://github.com/tableau/connector-plugin-sdk/workflows/TDVT%20CI/badge.svg?branch=master)](https://github.com/tableau/connector-plugin-sdk/actions?query=workflow%3A%22TDVT+CI%22+branch%3Amaster)
 
 This project consists of documentation, example files, the Tableau Datasource Verification Tool (TDVT) test harness, and a packaging tool that you can use to build and customize a Tableau Connector that uses an ODBC or JDBC driver.
 
 | Tool                                             | Latest Version     |
 |--------------------------------------------------|--------------------|
-| Connector Packager SDK (Beta) for Tableau 2019.3 | 10-02-2019         |
-| TDVT                                             | 2.1.2 (12-05-2019) |
+| Connector Packager SDK (Beta) for Tableau 2019.3 | 12-11-2019         |
+| TDVT                                             | 2.1.5 (01-08-2020) |
 | Connector Packager                               | 0.0.1 (10-03-2019) |
 
 * [Why Connectors?](#why-connectors)
@@ -75,6 +75,7 @@ Many things might change, but the most likely changes are how a connector is pac
 
 [Visit the project website and documentation here.](https://tableau.github.io/connector-plugin-sdk/)
 
+
 # Known Issues
 
 ## Current
@@ -82,7 +83,7 @@ Many things might change, but the most likely changes are how a connector is pac
 Support links that are not fully qualified (ie include the https:// header) will throw an error when the user clicks on them. This only affects in-development connectors, as we check for this when packaging a connector into a Taco.
 
 
-## Recenlty Fixed
+## Recently Fixed
 **(Mac Only) Packaged Connectors (.taco files) throws unexpected error in 2019.4**
 You can work around this by skipping signature verification with the command line argument `-DDisableVerifyConnectorPluginSignature=true`.
 Fixed in 2019.4.1.
@@ -90,7 +91,6 @@ Fixed in 2019.4.1.
 **The properties builder JavaScript truncates values containing the equals sign '=' in 2019.4**
 A bug in the JavaScript translation layer means that you cannot return values containing the '=' character from the JavaScript properties builder.
 Fixed in 2019.4.1.
-
 
 # Contributions
 
